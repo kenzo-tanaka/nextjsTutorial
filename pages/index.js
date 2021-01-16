@@ -6,14 +6,14 @@ import Date from "../components/date";
 
 import { getSortedPostsData } from "../lib/posts";
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
 
 const Home = ({ allPostsData }) => {
   return (
